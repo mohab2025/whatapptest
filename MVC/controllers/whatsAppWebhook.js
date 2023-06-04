@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const TOKEN = "mohab_whats_test";
 module.exports.verfyWhatsApp = (req, res, next) => {
-  console.log("req.query", req.query);
   var mode = req.query["hub.mode"];
   var challenge = req.query["hub.challenge"];
   var token = req.query["hub.verify_token"];
@@ -10,7 +9,8 @@ module.exports.verfyWhatsApp = (req, res, next) => {
     res.status(401);
     return next("token not valid");
   }
-  res.status(200).send(JSON.parse({ value: challenge }));
+  res.status(200).send({ value: challenge });
+  console.log("req.query", req.query);
 };
 // module.exports.getWhatsAppMassege = (req, res, next) => {s
 //     product
