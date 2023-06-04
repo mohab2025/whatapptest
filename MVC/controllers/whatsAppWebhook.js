@@ -12,15 +12,7 @@ module.exports.verfyWhatsApp = (req, res, next) => {
   res.status(200).send(challenge);
   console.log("req.query", req.query);
 };
-// module.exports.getWhatsAppMassege = (req, res, next) => {s
-//     product
-//       .find({})
-//       .populate("ownerId")
-//       .populate({ path: "skills", select: "name" })
-//       .then((data) => {
-//         res.status(200).json(data);
-//       })
-//       .catch((error) => {
-//         next(error);
-//       });
-//   };
+module.exports.postWebhook = (req, res, next) => {
+  console.log("jsonreq", JSON.stringify(req.body, null, 2));
+  console.log("req", req.body);
+};

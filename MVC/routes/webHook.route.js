@@ -6,6 +6,8 @@ const whatsAppController = require("../controllers/whatsAppWebhook");
 router
   .route("/webhooks")
 
-  .get(whatsAppController.verfyWhatsApp);
+  .get(whatsAppController.verfyWhatsApp)
+
+  .post(whatsAppController.postWebhook);
 
 module.exports = router;
