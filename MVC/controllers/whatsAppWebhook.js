@@ -9,7 +9,7 @@ module.exports.verfyWhatsApp = (req, res, next) => {
     res.status(401);
     return next("token not valid");
   }
-  res.status(200).send({ value: challenge });
+  res.status(200).send(JSON.parse({ value: challenge }));
   console.log("req.query", req.query);
 };
 // module.exports.getWhatsAppMassege = (req, res, next) => {s
