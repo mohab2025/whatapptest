@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const TOKEN = "test";
+const TOKEN = "mohab_whats_test";
 module.exports.verfyWhatsApp = (req, res, next) => {
   console.log("req.query", req.query);
   var mode = req.query["hub.mode"];
